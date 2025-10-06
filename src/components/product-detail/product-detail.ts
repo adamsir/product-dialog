@@ -14,6 +14,10 @@ function RelatedProducts(props: { products: Product[] }) {
     return `
       <a class="product-card" href="/produkty/p/${product.id}" data-navigo>
         <img src="${product.image}" alt="${product.name}" />
+        <div class="product-card__content">
+          <h3 class="product-card__title">${product.name}</h3>
+          <p>${product.price} ${product.currency}</p>
+        </div>
       </a>
     `;
   }

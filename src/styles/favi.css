@@ -2378,80 +2378,77 @@ input[type="checkbox"][disabled] {
 #product-list-page .colors-small.disabled {
   cursor: pointer;
 }
-#product-list-page .product-tabs {
-  display: none;
+
+.product-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 2px solid #e8e8e8;
 }
-@media screen and (min-width: 992px) {
-  #product-list-page .product-tabs {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    border-bottom: 2px solid #e8e8e8;
-  }
-  #product-list-page .product-tabs .product-tab-box {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    position: relative;
-    top: 1px;
-    padding-inline: 16px;
-    font-size: 15px;
-    line-height: 20px;
-  }
-  #product-list-page .product-tabs .product-tab-box.active,
-  #product-list-page .product-tabs .product-tab-box:hover {
-    cursor: pointer;
-  }
-  #product-list-page .product-tabs .product-tab-box.active:after,
-  #product-list-page .product-tabs .product-tab-box:hover:after {
-    content: "";
-    display: block;
-    border-bottom: 4px solid #a61932;
-    border-start-start-radius: 2px;
-    border-start-end-radius: 2px;
-    border-end-start-radius: 2px;
-    border-end-end-radius: 2px;
-    position: absolute;
-    bottom: -2px;
-  }
-  #product-list-page .product-tabs .product-tab-box:hover:after {
-    width: calc(100% - 32px);
-    left: 16px;
-  }
-  #product-list-page .product-tabs .product-tab-box.active:after {
-    width: 100%;
-    left: 0;
-  }
-  #product-list-page .product-tabs .product-tab-box.active {
-    font-weight: 500;
-  }
-  #product-list-page .product-tabs .product-tab-box a {
-    padding-block: 12px;
-  }
-  #product-list-page .product-tabs .product-tab-box a:focus,
-  #product-list-page .product-tabs .product-tab-box a:hover {
-    text-decoration: none;
-    color: #a61932;
-  }
-  #product-list-page .product-tabs .product-tab-box a:focus-visible {
-    outline: none;
-  }
-  #product-list-page .product-tabs .product-tab-box a.by-reviews-ordering,
-  #product-list-page .product-tabs .product-tab-box a.most-liked-ordering {
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: left 12px;
-    padding-left: 28px;
-  }
-  #product-list-page .product-tabs .product-tab-box a.most-liked-ordering {
-    background-image: url(https://s.favi.cz/static/frontend/_global/images/icons/heart-full.d6ebbbe887288a50a2c8a2f680074fec.svg);
-  }
-  #product-list-page .product-tabs .product-tab-box a.by-reviews-ordering {
-    background-image: url(https://s.favi.cz/static/frontend/Review/RatingAverageAsFiveStars/images/star-full.95a3de94808d2ae1ef82b41b7bbf2707.svg);
-  }
+.product-tabs .product-tab-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  top: 1px;
+  padding-inline: 16px;
+  font-size: 15px;
+  line-height: 20px;
 }
+.product-tabs .product-tab-box.active,
+.product-tabs .product-tab-box:hover {
+  cursor: pointer;
+}
+.product-tabs .product-tab-box.active:after,
+.product-tabs .product-tab-box:hover:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #a61932;
+  border-start-start-radius: 2px;
+  border-start-end-radius: 2px;
+  border-end-start-radius: 2px;
+  border-end-end-radius: 2px;
+  position: absolute;
+  bottom: -2px;
+}
+.product-tabs .product-tab-box:hover:after {
+  width: calc(100% - 32px);
+  left: 16px;
+}
+.product-tabs .product-tab-box.active:after {
+  width: 100%;
+  left: 0;
+}
+.product-tabs .product-tab-box.active {
+  font-weight: 500;
+}
+.product-tabs .product-tab-box a {
+  padding-block: 12px;
+}
+.product-tabs .product-tab-box a:focus,
+.product-tabs .product-tab-box a:hover {
+  text-decoration: none;
+  color: #a61932;
+}
+.product-tabs .product-tab-box a:focus-visible {
+  outline: none;
+}
+.product-tabs .product-tab-box a.by-reviews-ordering,
+.product-tabs .product-tab-box a.most-liked-ordering {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left 12px;
+  padding-left: 28px;
+}
+.product-tabs .product-tab-box a.most-liked-ordering {
+  background-image: url(https://s.favi.cz/static/frontend/_global/images/icons/heart-full.d6ebbbe887288a50a2c8a2f680074fec.svg);
+}
+.product-tabs .product-tab-box a.by-reviews-ordering {
+  background-image: url(https://s.favi.cz/static/frontend/Review/RatingAverageAsFiveStars/images/star-full.95a3de94808d2ae1ef82b41b7bbf2707.svg);
+}
+
 @media screen and (min-width: 1200px) {
-  #product-list-page .product-tabs .product-tab-box {
+  .product-tabs .product-tab-box {
     padding-inline: 16px;
   }
 }
