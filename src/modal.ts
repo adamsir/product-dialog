@@ -1,40 +1,85 @@
-const getBaseTemplate = (innerHTML: string | undefined) => {
-  const wrapper = document.createElement("div");
-
-  wrapper.className = "modal__content";
-
-  if (innerHTML) {
-    wrapper.innerHTML = innerHTML;
-  }
-  return wrapper;
-};
-
 class Modal {
   private id: string;
-  private content: Node;
+  private wrapper: HTMLElement | null;
+  private content: HTMLElement;
+  private backdrop: HTMLElement;
+  private closeButton: HTMLElement;
+  private isOpen: boolean;
+  private closeCallbacks: Array<() => void>;
 
   constructor(id: string) {
     this.id = id;
-    this.content = getBaseTemplate(undefined);
+    this.wrapper = null;
+    this.isOpen = false;
+    this.closeCallbacks = [];
+
+    // Create elements but don't add to DOM yet
+    this.content = document.createElement("div");
+    this.content.className = "modal__content";
+
+    this.backdrop = document.createElement("div");
+    this.backdrop.className = "modal__backdrop";
+    this.backdrop.addEventListener("click", () => this.close());
+
+    this.closeButton = document.createElement("div");
+    this.closeButton.className = "modal__close";
+    this.closeButton.addEventListener("click", () => this.close());
+
+    // Auto-open the modal on instantiation
+    this.open();
   }
 
-  render(innerHTML: string) {
-    this.content = getBaseTemplate(innerHTML);
-    this.dangerouslySetInnerHTML();
+  /**
+   * Opens the modal and adds it to the DOM
+   */
+  open(): void {
+    if (this.isOpen) return;
+
+    this.wrapper = document.createElement("div");
+    this.wrapper.setAttribute("id", this.id);
+    this.wrapper.className = "modal";
+
+    this.wrapper.appendChild(this.backdrop);
+    this.wrapper.appendChild(this.closeButton);
+    this.wrapper.appendChild(this.content);
+
+    document.body.appendChild(this.wrapper);
+    this.isOpen = true;
   }
 
-  private dangerouslySetInnerHTML() {
-    const wrapper = document.createElement("div");
-    const backdrop = document.createElement("div");
+  /**
+   * Closes the modal and removes it from the DOM
+   */
+  close(): void {
+    if (!this.isOpen || !this.wrapper) return;
 
-    backdrop.className = "modal__backdrop";
-    wrapper.setAttribute("id", this.id);
-    wrapper.className = "modal";
+    this.wrapper.remove();
+    this.wrapper = null;
+    this.isOpen = false;
 
-    wrapper.appendChild(this.content);
-    wrapper.appendChild(backdrop);
+    // Execute all registered close callbacks
+    this.closeCallbacks.forEach((callback) => callback());
+  }
 
-    document.body.appendChild(wrapper);
+  /**
+   * Renders HTML content into the modal
+   */
+  render(innerHTML: string): void {
+    this.content.innerHTML = innerHTML;
+  }
+
+  /**
+   * Registers a callback to be executed when the modal closes
+   */
+  onClose(callback: () => void): void {
+    this.closeCallbacks.push(callback);
+  }
+
+  /**
+   * Returns whether the modal is currently open
+   */
+  getIsOpen(): boolean {
+    return this.isOpen;
   }
 }
 
