@@ -1,4 +1,3 @@
-import {getProducts} from "../../api/functions/getProduct";
 import type { Product } from "../../api/types";
 import { router } from "../../router";
 
@@ -6,7 +5,7 @@ type ActiveTab = 'detail' | 'relatedProducts';
 
 function RelatedProducts(props: { products: Product[] }) {
   const { products } = props;
-  if (!products) {
+  if (!products || products.length === 0) {
     return null;
   }
 
@@ -92,7 +91,7 @@ function ProductDetail(props: { product: Product, relatedProducts: Product[], ac
       <p>${product.description}</p>
     ` : `
       <div class="product-related-products">
-        ${RelatedProducts({ products: relatedProducts })}
+        ${RelatedProducts({ products: relatedProducts }) ?? `<p>Žádné podobné produkty</p>`}
       </div>
     `}
   </div>

@@ -2,6 +2,7 @@ class Modal {
   private id: string;
   private wrapper: HTMLElement | null;
   private content: HTMLElement;
+  private contentWrapper: HTMLElement;
   private backdrop: HTMLElement;
   private closeButton: HTMLElement;
   private isOpen: boolean;
@@ -16,7 +17,8 @@ class Modal {
     // Create elements but don't add to DOM yet
     this.content = document.createElement("div");
     this.content.className = "modal__content";
-
+    this.contentWrapper = document.createElement("div");
+    this.contentWrapper.className = "modal__content-wrapper";
     this.backdrop = document.createElement("div");
     this.backdrop.className = "modal__backdrop";
     this.backdrop.addEventListener("click", () => this.close());
@@ -40,11 +42,14 @@ class Modal {
     this.wrapper.className = "modal";
 
     this.wrapper.appendChild(this.backdrop);
-    this.wrapper.appendChild(this.closeButton);
-    this.wrapper.appendChild(this.content);
+    this.wrapper.appendChild(this.contentWrapper);
+
+    this.contentWrapper.appendChild(this.content);
+    this.contentWrapper.appendChild(this.closeButton);
 
     document.body.appendChild(this.wrapper);
     this.isOpen = true;
+    this.setBodyScroll(true);
   }
 
   /**
@@ -59,6 +64,7 @@ class Modal {
 
     // Execute all registered close callbacks
     this.closeCallbacks.forEach((callback) => callback());
+    this.setBodyScroll(false);
   }
 
   /**
@@ -80,6 +86,13 @@ class Modal {
    */
   getIsOpen(): boolean {
     return this.isOpen;
+  }
+
+  /**
+   * Set body scroll
+   */
+  setBodyScroll(scroll: boolean): void {
+    document.body.style.overflow = scroll ? "hidden" : "auto";
   }
 }
 

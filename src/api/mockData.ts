@@ -330,6 +330,7 @@ export const mockProducts: Product[] = [
       height: 85,
       depth: 180,
     },
+    relatedProductIds: ["16753600", "22569618", "16031465", "16753603"],
   },
   {
     id: "24448239",
@@ -378,6 +379,13 @@ export const mockProducts: Product[] = [
       height: 90,
       depth: 200,
     },
+    relatedProductIds: [
+      "20612024",
+      "22569618",
+      "16031465",
+      "9264630",
+      "16753603",
+    ],
   },
   {
     id: "24013847",
@@ -401,6 +409,7 @@ export const mockProducts: Product[] = [
       height: 85,
       depth: 180,
     },
+    relatedProductIds: ["16753603", "16753600"],
   },
   {
     id: "24800752",
@@ -424,6 +433,7 @@ export const mockProducts: Product[] = [
       height: 90,
       depth: 200,
     },
+    relatedProductIds: ["16031465", "16753603", "9264630"],
   },
   {
     id: "23808859",
@@ -447,5 +457,6 @@ export const mockProducts: Product[] = [
       height: 140,
       depth: 100,
     },
+    relatedProductIds: ["16753603", "16753600"],
   },
 ];

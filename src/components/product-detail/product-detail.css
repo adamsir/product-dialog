@@ -6,18 +6,27 @@
   grid-row-gap: 0px;
 }
 
+.product-detail__image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 @container modal (min-width: 600px) {
   .product-detail {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
   }
+  .product-detail__image {
+    width: auto;
+    height: 240px;
+  }
 }
 
-.product-detail__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .product-detail__content {
   width: 100%;
@@ -40,7 +49,7 @@
 }
 
 .modal .product-related-products .product-card {
-  width: 200px;
+  width: 240px;
 }
 
 .product-card {
