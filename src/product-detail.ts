@@ -3,29 +3,39 @@ import type { Product } from "./api/types";
 type ActiveTab = 'detail' | 'relatedProducts';
 
 function ProductDetail(props: { product: Product, activeTab: ActiveTab }) {
-  let activeTab = props.activeTab ?? 'detail';
+  const activeTab = props.activeTab ?? 'detail';
 
-  const tab = document.querySelectorAll('.product-detail__tabs .product-tab-box') as NodeListOf<HTMLDivElement>;
+  // Function to handle tab switching
+  const handleTabSwitch = (newTab: ActiveTab) => {
+    // Update URL without page reload
+    const newUrl = newTab === 'detail' 
+      ? `/produkty/p/${props.product.id}` 
+      : `/produkty/p/${props.product.id}/related`;
+    
+    // Use history API to update URL
+    window.history.pushState({}, '', newUrl);
+    
+    // Re-render the component with the new tab
+    const modalContent = document.querySelector('.modal__content');
+    if (modalContent) {
+      modalContent.innerHTML = ProductDetail({ product: props.product, activeTab: newTab });
+    }
+  };
 
-  tab.forEach(tab => {
-    tab.addEventListener('click', (event) => {
-      event.preventDefault();
-      activeTab = tab.getAttribute('data-tab') ?? 'detail';
+  // Add event listeners after the DOM is rendered
+  setTimeout(() => {
+    const tabs = document.querySelectorAll('.product-detail__tabs .product-tab-box') as NodeListOf<HTMLDivElement>;
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (event) => {
+        event.preventDefault();
+        const tabType = tab.getAttribute('data-tab') as ActiveTab;
+        if (tabType && tabType !== activeTab) {
+          handleTabSwitch(tabType);
+        }
+      });
     });
-  });
-  
-  
-  /* tab.addEventListener('click', (event) => {
-    activeTab = tab.getAttribute('data-tab') ?? 'detail';
-  }); */
-  
-  /* const relatedProducts = props.product.relatedProducts?.map(product => `
-    <div class="product-related-product">
-      <img src="${product.image}" alt="${product.name}" />
-      <h2>${product.name}</h2>
-      <p>${product.price} ${product.currency}</p>
-    </div>
-  `); */
+  }, 0);
 
   return `
   <div class="product-detail">
