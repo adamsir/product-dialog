@@ -1,7 +1,7 @@
 import Navigo, { type Match } from "navigo";
 import ModalManager from "./modal-manager";
 import getProduct from "./api/functions/getProduct";
-import ProductDetail from "./product-detail";
+import ProductDetail from "./components/product-detail";
 
 const router = new Navigo("/", { strategy: "ALL" });
 const modalManager = ModalManager.getInstance();
