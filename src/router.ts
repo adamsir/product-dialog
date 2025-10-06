@@ -1,5 +1,5 @@
 import Navigo, { type Match } from "navigo";
-import ModalManager from "./modal-manager";
+import { ModalManager } from "./components/modal";
 import {getProduct, getProducts} from "./api/functions/getProduct";
 import ProductDetail from "./components/product-detail";
 

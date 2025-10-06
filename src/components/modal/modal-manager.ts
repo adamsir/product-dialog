@@ -1,5 +1,5 @@
 import Modal from "./modal";
-import type { Product } from "./api/types";
+import type { Product } from "../../api/types";
 
 class ModalManager {
   private static instance: ModalManager;
