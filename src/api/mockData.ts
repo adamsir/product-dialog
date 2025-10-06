@@ -21,7 +21,15 @@ export const mockProducts: Product[] = [
       width: 200,
       height: 85,
       depth: 90
-    }
+    },
+    relatedProducts: [
+      "24448239",
+      "23388331-baron",
+      "24908589",
+      "24013847",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "16753596",
@@ -43,7 +51,15 @@ export const mockProducts: Product[] = [
       width: 200,
       height: 85,
       depth: 90
-    }
+    },
+    relatedProducts: [
+      "23388331-baron",
+      "24800752",
+      "24448239",
+      "24908589",
+      "24013847",
+      "23808859"
+    ]
   },
   {
     id: "16163734",
@@ -64,7 +80,15 @@ export const mockProducts: Product[] = [
       width: 180,
       height: 80,
       depth: 85
-    }
+    },
+    relatedProducts: [
+      "23388331-baron",
+      "24448239",
+      "24908589",
+      "24013847",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "20612024",
@@ -85,7 +109,15 @@ export const mockProducts: Product[] = [
       width: 281,
       height: 85,
       depth: 191
-    }
+    },
+    relatedProducts: [
+      "24448239",
+      "23388331-baron",
+      "24908589",
+      "24013847",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "22569618",
@@ -106,7 +138,15 @@ export const mockProducts: Product[] = [
       width: 250,
       height: 80,
       depth: 180
-    }
+    },
+    relatedProducts: [
+      "24908589",
+      "24448239",
+      "23388331-baron",
+      "24013847",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "9264630",
@@ -127,7 +167,15 @@ export const mockProducts: Product[] = [
       width: 190,
       height: 82,
       depth: 88
-    }
+    },
+    relatedProducts: [
+      "23388331-baron",
+      "24448239",
+      "24908589",
+      "24013847",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "16031465",
@@ -148,7 +196,15 @@ export const mockProducts: Product[] = [
       width: 185,
       height: 78,
       depth: 86
-    }
+    },
+    relatedProducts: [
+      "24448239",
+      "24013847",
+      "23388331-baron",
+      "24908589",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "16753603",
@@ -170,7 +226,15 @@ export const mockProducts: Product[] = [
       width: 200,
       height: 85,
       depth: 90
-    }
+    },
+    relatedProducts: [
+      "24908589",
+      "23388331-baron",
+      "24448239",
+      "24013847",
+      "24800752",
+      "23808859"
+    ]
   },
   {
     id: "9264635",
@@ -191,7 +255,15 @@ export const mockProducts: Product[] = [
       width: 190,
       height: 82,
       depth: 88
-    }
+    },
+    relatedProducts: [
+      "23388331-baron",
+      "24800752",
+      "24448239",
+      "24013847",
+      "24908589",
+      "23808859"
+    ]
   },
   {
     id: "23388331",
@@ -212,6 +284,145 @@ export const mockProducts: Product[] = [
       width: 320,
       height: 90,
       depth: 200
+    },
+    relatedProducts: [
+      "24013847",
+      "23388331-baron",
+      "24448239",
+      "24908589",
+      "24800752",
+      "23808859"
+    ]
+  }
+];
+
+export const relatedProducts: Product[] = [
+  {
+    id: "23388331-baron",
+    name: "Rozkládací rohová sedačka BARONA černá",
+    price: 19990,
+    currency: "Kč",
+    image: "https://img.cz.favicdn.net/images/products/300x300/17e7e8ce-9838-41c0-a96b-f685413976b2.webp",
+    category: "sedací soupravy",
+    description: "Stylová rozkládací rohová sedačka s moderním designem a pohodlným sezením",
+    inStock: false,
+    deliveryTime: "Na objednávku",
+    rating: 4.2,
+    likes: 78,
+    brand: "BARONA",
+    color: "Černá",
+    material: "Textil",
+    dimensions: {
+      width: 280,
+      height: 85,
+      depth: 180
+    }
+  },
+  {
+    id: "24448239",
+    name: "Rozkládací pohovka Melody 3 Béžová",
+    price: 10509,
+    currency: "Kč",
+    image: "https://img.cz.favicdn.net/images/products/300x300/be92f2f7-74f1-4b72-9a53-38635aaa407e.webp",
+    category: "sedací soupravy",
+    description: "Elegantní rozkládací pohovka s moderním designem a pohodlným sezením",
+    inStock: false,
+    deliveryTime: "Do 21 dnů",
+    rating: 4.5,
+    likes: 21,
+    brand: "Melody",
+    model: "3",
+    color: "Béžová",
+    material: "Textil",
+    dimensions: {
+      width: 200,
+      height: 85,
+      depth: 90
+    }
+  },
+  {
+    id: "24908589",
+    name: "Rozkládací rohová sedací souprava GRANDE s taburety a poličkou model 2 Levá v-ne-mik15-27",
+    price: 12589,
+    currency: "Kč",
+    image: "https://img.cz.favicdn.net/images/products/300x300/53607180-9eec-47dc-b9a3-e765df6b39b1.webp",
+    category: "sedací soupravy",
+    description: "Kompletní rohová sedací souprava s taburety a poličkou pro maximální pohodlí",
+    inStock: false,
+    deliveryTime: "Do 14 dnů",
+    rating: 4.0,
+    likes: 1,
+    brand: "GRANDE",
+    model: "2",
+    color: "V-ne-mik15-27",
+    material: "Textil",
+    dimensions: {
+      width: 320,
+      height: 90,
+      depth: 200
+    }
+  },
+  {
+    id: "24013847",
+    name: "Sedací souprava Szafran, Potah: Coral 45, Strana: levá Mirjan24 5903211400919",
+    price: 26238,
+    currency: "Kč",
+    image: "https://img.cz.favicdn.net/images/products/300x300/e56405d2-8e8f-4423-83a9-3ae2f31e693b.webp",
+    category: "sedací soupravy",
+    description: "Luxusní sedací souprava s kvalitním potahem a moderním designem",
+    inStock: false,
+    deliveryTime: "Do 7 dnů",
+    rating: 4.0,
+    likes: 2,
+    brand: "Szafran",
+    color: "Coral 45",
+    material: "Kvalitní textil",
+    dimensions: {
+      width: 280,
+      height: 85,
+      depth: 180
+    }
+  },
+  {
+    id: "24800752",
+    name: "Rozkládací rohová sedačka BENTI tmavě šedá / černá",
+    price: 29990,
+    currency: "Kč",
+    image: "https://img.cz.favicdn.net/images/products/300x300/f517529c-5f4e-4090-a947-7502cea53b43.webp",
+    category: "sedací soupravy",
+    description: "Stylová rozkládací rohová sedačka s tmavě šedo-černým designem",
+    inStock: false,
+    deliveryTime: "Na objednávku",
+    rating: 4.5,
+    likes: 127,
+    brand: "BENTI",
+    color: "Tmavě šedá / černá",
+    material: "Textil",
+    dimensions: {
+      width: 300,
+      height: 90,
+      depth: 200
+    }
+  },
+  {
+    id: "23808859",
+    name: "Tmavě šedá rozkládací rohová pohovka ZENOVA 220x140 cm, oboustranná",
+    price: 19990,
+    currency: "Kč",
+    image: "https://img.cz.favicdn.net/images/products/300x300/f517529c-5f4e-4090-a947-7502cea53b43.webp",
+    category: "sedací soupravy",
+    description: "Stylová rozkládací rohová pohovka s tmavě šedo-černým designem",
+    inStock: false,
+    deliveryTime: "Na objednávku",
+    rating: 4.5,
+    likes: 127,
+    brand: "ZENOVA",
+    color: "Tmavě šedá",
+    material: "Textil",
+    dimensions: {
+      width: 220,
+      height: 140,
+      depth: 100
     }
   }
 ];

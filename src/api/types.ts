@@ -19,6 +19,7 @@ export interface Product {
     height?: number;
     depth?: number;
   };
+  relatedProducts?: string[];
 }
 
 export interface ProductListResponse {
