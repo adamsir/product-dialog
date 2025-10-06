@@ -1,3 +1,3 @@
-import './vendor.css'
+import './favi.css'
 import './style.css'
 
