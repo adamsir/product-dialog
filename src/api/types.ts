@@ -19,7 +19,9 @@ export interface Product {
     height?: number;
     depth?: number;
   };
-  relatedProducts?: string[];
+  relatedProductIds?: string[];
+  // only for already fetched products
+  relatedProducts?: Product[];
 }
 
 export interface ProductListResponse {

@@ -1,9 +1,9 @@
 import Navigo, { type Match } from "navigo";
 import ModalManager from "./modal-manager";
-import getProduct from "./api/functions/getProduct";
+import {getProduct, getProducts} from "./api/functions/getProduct";
 import ProductDetail from "./components/product-detail";
 
-const router = new Navigo("/", { strategy: "ALL" });
+export const router = new Navigo("/", { strategy: "ALL" });
 const modalManager = ModalManager.getInstance();
 
 // Helper function to handle product modal display
@@ -18,7 +18,7 @@ async function handleProductModal(id: string, activeTab: 'detail' | 'relatedProd
     // Just switch the tab
     const modal = modalManager.getCurrentModal();
     if (modal) {
-      modal.render(ProductDetail({ product: currentProduct, activeTab }));
+      modal.render(ProductDetail({ product: currentProduct, relatedProducts: currentProduct.relatedProducts || [], activeTab }));
     }
     return;
   }
@@ -34,11 +34,11 @@ async function handleProductModal(id: string, activeTab: 'detail' | 'relatedProd
 
   productModalDetail.render('<div class="modal__loader"></div>');
   const product = await getProduct(id);
-  console.log(product);
+  const relatedProducts = await getProducts(product?.relatedProductIds || []);
 
   if (product) {
-    modalManager.setCurrentProduct(product);
-    productModalDetail.render(ProductDetail({ product, activeTab }));
+    modalManager.setCurrentProduct({...product, relatedProducts});
+    productModalDetail.render(ProductDetail({ product, relatedProducts, activeTab }));
   } else {
     productModalDetail.render("<h1>Produkt nebyl nalezen</h1>");
   }

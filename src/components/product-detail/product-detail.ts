@@ -1,24 +1,48 @@
+import {getProducts} from "../../api/functions/getProduct";
 import type { Product } from "../../api/types";
+import { router } from "../../router";
 
 type ActiveTab = 'detail' | 'relatedProducts';
 
-function ProductDetail(props: { product: Product, activeTab: ActiveTab }) {
+function RelatedProducts(props: { products: Product[] }) {
+  const { products } = props;
+  if (!products) {
+    return null;
+  }
+
+  const renderProductCard = (product: Product) => {
+    return `
+      <a class="product-card" href="/produkty/p/${product.id}" data-navigo>
+        <img src="${product.image}" alt="${product.name}" />
+      </a>
+    `;
+  }
+
+  return `
+    <div class="product-related-products">
+      ${products.map(renderProductCard).join('')}
+    </div>
+  `;
+}
+
+function ProductDetail(props: { product: Product, relatedProducts: Product[], activeTab: ActiveTab }) {
+  const { product, relatedProducts } = props;
   const activeTab = props.activeTab ?? 'detail';
 
   // Function to handle tab switching
-  const handleTabSwitch = (newTab: ActiveTab) => {
+  const handleTabSwitch = async (newTab: ActiveTab) => {
     // Update URL without page reload
     const newUrl = newTab === 'detail' 
-      ? `/produkty/p/${props.product.id}` 
-      : `/produkty/p/${props.product.id}/related`;
+      ? `/produkty/p/${product.id}` 
+      : `/produkty/p/${product.id}/related`;
     
-    // Use history API to update URL
-    window.history.pushState({}, '', newUrl);
+    // Use router to update URL
+    router.navigate(newUrl)
     
     // Re-render the component with the new tab
     const modalContent = document.querySelector('.modal__content');
     if (modalContent) {
-      modalContent.innerHTML = ProductDetail({ product: props.product, activeTab: newTab });
+      modalContent.innerHTML = ProductDetail({ product, relatedProducts, activeTab: newTab });
     }
   };
 
@@ -40,31 +64,31 @@ function ProductDetail(props: { product: Product, activeTab: ActiveTab }) {
   return `
   <div class="product-detail">
     <div class="product-detail__image">
-      <img src="${props.product.image}" alt="${props.product.name}" />
+      <img src="${product.image}" alt="${product.name}" />
     </div>
     <div class="product-detail__info">
-      <h1>${props.product.name}</h1>
-      <p>${props.product.price} ${props.product.currency}</p>
+      <h1>${product.name}</h1>
+      <p>${product.price} ${product.currency}</p>
     </div>
   </div>
   <div class="product-tabs product-detail__tabs">
     <div class="product-tab-box ${activeTab === 'detail' ? 'active' : ''}" data-tab="detail">
-      <a href="/produkty/p/${props.product.id}" data-navigo>
+      <a href="/produkty/p/${product.id}" data-navigo>
         Popis
       </a>
     </div>
     <div class="product-tab-box ${activeTab === 'relatedProducts' ? 'active' : ''}" data-tab="relatedProducts">
-      <a href="/produkty/p/${props.product.id}/related" data-navigo>
+      <a href="/produkty/p/${product.id}/related" data-navigo>
         Podobné produkty
       </a>
     </div>
   </div>
   <div class="product-detail__content">
     ${activeTab === 'detail' ? `
-      <p>${props.product.description}</p>
+      <p>${product.description}</p>
     ` : `
       <div class="product-related-products">
-        tvoje mama
+        ${RelatedProducts({ products: relatedProducts })}
       </div>
     `}
   </div>

@@ -1,4 +1,4 @@
-import type { Product } from './types';
+import type { Product } from "./types";
 
 export const mockProducts: Product[] = [
   {
@@ -6,9 +6,11 @@ export const mockProducts: Product[] = [
     name: "Velká rozkládací pohovka HEWLET MODEL 2 Šedá-černá",
     price: 6799,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/06590019-7399-4a39-b478-c590213e5322.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/06590019-7399-4a39-b478-c590213e5322.webp",
     category: "sedací soupravy",
-    description: "Velká rozkládací pohovka s moderním designem a pohodlným sezením",
+    description:
+      "Velká rozkládací pohovka s moderním designem a pohodlným sezením",
     inStock: false,
     deliveryTime: "Do 14 dnů",
     rating: 4.5,
@@ -20,25 +22,27 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 200,
       height: 85,
-      depth: 90
+      depth: 90,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "24448239",
       "23388331-baron",
       "24908589",
       "24013847",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "16753596",
     name: "Velká rozkládací pohovka HEWLET MODEL 2 Černá-šedá",
     price: 6799,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/06602ca8-0a3b-4ae2-902e-8bb690c2a4fd.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/06602ca8-0a3b-4ae2-902e-8bb690c2a4fd.webp",
     category: "sedací soupravy",
-    description: "Velká rozkládací pohovka s moderním designem a pohodlným sezením",
+    description:
+      "Velká rozkládací pohovka s moderním designem a pohodlným sezením",
     inStock: false,
     deliveryTime: "Do 14 dnů",
     rating: 4.5,
@@ -50,23 +54,24 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 200,
       height: 85,
-      depth: 90
+      depth: 90,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "23388331-baron",
       "24800752",
       "24448239",
       "24908589",
       "24013847",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "16163734",
     name: "Rozkládací pohovka Katarina šedá molitanová",
     price: 5490,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/3c678505-8efb-4513-a44a-66e4382dca9c.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/3c678505-8efb-4513-a44a-66e4382dca9c.webp",
     category: "sedací soupravy",
     description: "Klasická rozkládací pohovka s molitanovou výplní",
     inStock: true,
@@ -79,25 +84,27 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 180,
       height: 80,
-      depth: 85
+      depth: 85,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "23388331-baron",
       "24448239",
       "24908589",
       "24013847",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "20612024",
     name: "Sedací souprava COOL | 281x191 cm | rozkládací + úložný prostor | PRAVÁ | šedo černá 23/15",
     price: 15990,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/be62f61e-f34b-4342-a2a0-18c865c2a249.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/be62f61e-f34b-4342-a2a0-18c865c2a249.webp",
     category: "sedací soupravy",
-    description: "Moderní sedací souprava s úložným prostorem a rozkládacím mechanismem",
+    description:
+      "Moderní sedací souprava s úložným prostorem a rozkládacím mechanismem",
     inStock: true,
     deliveryTime: "Do 10 dnů",
     rating: 4.7,
@@ -108,25 +115,27 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 281,
       height: 85,
-      depth: 191
+      depth: 191,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "24448239",
       "23388331-baron",
       "24908589",
       "24013847",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "22569618",
     name: "Krémová rohová pohovka SMART COSARO, oboustranná + 2 polštářky ZDARMA",
     price: 10790,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/c2abd26e-d9f0-4720-b9d0-0401554d9dbe.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/c2abd26e-d9f0-4720-b9d0-0401554d9dbe.webp",
     category: "sedací soupravy",
-    description: "Elegantní rohová pohovka s oboustranným designem a bonusovými polštářky",
+    description:
+      "Elegantní rohová pohovka s oboustranným designem a bonusovými polštářky",
     inStock: true,
     deliveryTime: "Do 12 dnů",
     rating: 4.6,
@@ -137,23 +146,24 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 250,
       height: 80,
-      depth: 180
+      depth: 180,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "24908589",
       "24448239",
       "23388331-baron",
       "24013847",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "9264630",
     name: "Rozkládací pohovka HEWLET Černá-šedá",
     price: 11390,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/171a2c23-af6c-4a22-8823-0ca1a71dbe79.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/171a2c23-af6c-4a22-8823-0ca1a71dbe79.webp",
     category: "sedací soupravy",
     description: "Kvalitní rozkládací pohovka s moderním designem",
     inStock: false,
@@ -166,23 +176,24 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 190,
       height: 82,
-      depth: 88
+      depth: 88,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "23388331-baron",
       "24448239",
       "24908589",
       "24013847",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "16031465",
     name: "Rozkládací pohovka Karin šedá pružinová",
     price: 6769,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/3c673ece-b598-40c2-8fc9-431ad5a7eec2.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/3c673ece-b598-40c2-8fc9-431ad5a7eec2.webp",
     category: "sedací soupravy",
     description: "Klasická rozkládací pohovka s pružinovou konstrukcí",
     inStock: true,
@@ -195,23 +206,24 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 185,
       height: 78,
-      depth: 86
+      depth: 86,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "24448239",
       "24013847",
       "23388331-baron",
       "24908589",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "16753603",
     name: "Velká rozkládací pohovka HEWLET MODEL 2 Černá-červená",
     price: 6590,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/06598527-c980-4c16-9cfb-2eb44bf76a13.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/06598527-c980-4c16-9cfb-2eb44bf76a13.webp",
     category: "sedací soupravy",
     description: "Velká rozkládací pohovka s výrazným červeno-černým designem",
     inStock: true,
@@ -225,23 +237,24 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 200,
       height: 85,
-      depth: 90
+      depth: 90,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "24908589",
       "23388331-baron",
       "24448239",
       "24013847",
       "24800752",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "9264635",
     name: "Rozkládací pohovka HEWLET Šedá-černá",
     price: 6769,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/171a0a8b-57c7-4062-91bc-3194571265ff.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/171a0a8b-57c7-4062-91bc-3194571265ff.webp",
     category: "sedací soupravy",
     description: "Stylová rozkládací pohovka s šedo-černým designem",
     inStock: false,
@@ -254,23 +267,24 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 190,
       height: 82,
-      depth: 88
+      depth: 88,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "23388331-baron",
       "24800752",
       "24448239",
       "24013847",
       "24908589",
-      "23808859"
-    ]
+      "23808859",
+    ],
   },
   {
     id: "23388331",
     name: "Moderní sedací souprava LUXURY | 320x200 cm | rohová + úložný prostor | PRAVÁ | tmavě šedá",
     price: 19990,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/17e7e8ce-9838-41c0-a96b-f685413976b2.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/17e7e8ce-9838-41c0-a96b-f685413976b2.webp",
     category: "sedací soupravy",
     description: "Luxusní rohová sedací souprava s velkým úložným prostorem",
     inStock: true,
@@ -283,28 +297,27 @@ export const mockProducts: Product[] = [
     dimensions: {
       width: 320,
       height: 90,
-      depth: 200
+      depth: 200,
     },
-    relatedProducts: [
+    relatedProductIds: [
       "24013847",
       "23388331-baron",
       "24448239",
       "24908589",
       "24800752",
-      "23808859"
-    ]
-  }
-];
-
-export const relatedProducts: Product[] = [
+      "23808859",
+    ],
+  },
   {
     id: "23388331-baron",
     name: "Rozkládací rohová sedačka BARONA černá",
     price: 19990,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/17e7e8ce-9838-41c0-a96b-f685413976b2.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/17e7e8ce-9838-41c0-a96b-f685413976b2.webp",
     category: "sedací soupravy",
-    description: "Stylová rozkládací rohová sedačka s moderním designem a pohodlným sezením",
+    description:
+      "Stylová rozkládací rohová sedačka s moderním designem a pohodlným sezením",
     inStock: false,
     deliveryTime: "Na objednávku",
     rating: 4.2,
@@ -315,17 +328,19 @@ export const relatedProducts: Product[] = [
     dimensions: {
       width: 280,
       height: 85,
-      depth: 180
-    }
+      depth: 180,
+    },
   },
   {
     id: "24448239",
     name: "Rozkládací pohovka Melody 3 Béžová",
     price: 10509,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/be92f2f7-74f1-4b72-9a53-38635aaa407e.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/be92f2f7-74f1-4b72-9a53-38635aaa407e.webp",
     category: "sedací soupravy",
-    description: "Elegantní rozkládací pohovka s moderním designem a pohodlným sezením",
+    description:
+      "Elegantní rozkládací pohovka s moderním designem a pohodlným sezením",
     inStock: false,
     deliveryTime: "Do 21 dnů",
     rating: 4.5,
@@ -337,17 +352,19 @@ export const relatedProducts: Product[] = [
     dimensions: {
       width: 200,
       height: 85,
-      depth: 90
-    }
+      depth: 90,
+    },
   },
   {
     id: "24908589",
     name: "Rozkládací rohová sedací souprava GRANDE s taburety a poličkou model 2 Levá v-ne-mik15-27",
     price: 12589,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/53607180-9eec-47dc-b9a3-e765df6b39b1.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/53607180-9eec-47dc-b9a3-e765df6b39b1.webp",
     category: "sedací soupravy",
-    description: "Kompletní rohová sedací souprava s taburety a poličkou pro maximální pohodlí",
+    description:
+      "Kompletní rohová sedací souprava s taburety a poličkou pro maximální pohodlí",
     inStock: false,
     deliveryTime: "Do 14 dnů",
     rating: 4.0,
@@ -359,17 +376,19 @@ export const relatedProducts: Product[] = [
     dimensions: {
       width: 320,
       height: 90,
-      depth: 200
-    }
+      depth: 200,
+    },
   },
   {
     id: "24013847",
     name: "Sedací souprava Szafran, Potah: Coral 45, Strana: levá Mirjan24 5903211400919",
     price: 26238,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/e56405d2-8e8f-4423-83a9-3ae2f31e693b.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/e56405d2-8e8f-4423-83a9-3ae2f31e693b.webp",
     category: "sedací soupravy",
-    description: "Luxusní sedací souprava s kvalitním potahem a moderním designem",
+    description:
+      "Luxusní sedací souprava s kvalitním potahem a moderním designem",
     inStock: false,
     deliveryTime: "Do 7 dnů",
     rating: 4.0,
@@ -380,17 +399,19 @@ export const relatedProducts: Product[] = [
     dimensions: {
       width: 280,
       height: 85,
-      depth: 180
-    }
+      depth: 180,
+    },
   },
   {
     id: "24800752",
     name: "Rozkládací rohová sedačka BENTI tmavě šedá / černá",
     price: 29990,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/f517529c-5f4e-4090-a947-7502cea53b43.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/f517529c-5f4e-4090-a947-7502cea53b43.webp",
     category: "sedací soupravy",
-    description: "Stylová rozkládací rohová sedačka s tmavě šedo-černým designem",
+    description:
+      "Stylová rozkládací rohová sedačka s tmavě šedo-černým designem",
     inStock: false,
     deliveryTime: "Na objednávku",
     rating: 4.5,
@@ -401,17 +422,19 @@ export const relatedProducts: Product[] = [
     dimensions: {
       width: 300,
       height: 90,
-      depth: 200
-    }
+      depth: 200,
+    },
   },
   {
     id: "23808859",
     name: "Tmavě šedá rozkládací rohová pohovka ZENOVA 220x140 cm, oboustranná",
     price: 19990,
     currency: "Kč",
-    image: "https://img.cz.favicdn.net/images/products/300x300/f517529c-5f4e-4090-a947-7502cea53b43.webp",
+    image:
+      "https://img.cz.favicdn.net/images/products/300x300/f517529c-5f4e-4090-a947-7502cea53b43.webp",
     category: "sedací soupravy",
-    description: "Stylová rozkládací rohová pohovka s tmavě šedo-černým designem",
+    description:
+      "Stylová rozkládací rohová pohovka s tmavě šedo-černým designem",
     inStock: false,
     deliveryTime: "Na objednávku",
     rating: 4.5,
@@ -422,7 +445,7 @@ export const relatedProducts: Product[] = [
     dimensions: {
       width: 220,
       height: 140,
-      depth: 100
-    }
-  }
+      depth: 100,
+    },
+  },
 ];
