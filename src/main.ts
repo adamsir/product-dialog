@@ -1,3 +1,2 @@
-import './favi.css'
-import './style.css'
-
+import './styles/favi.css'
+import './styles/style.css'
