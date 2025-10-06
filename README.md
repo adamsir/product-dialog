@@ -19,5 +19,5 @@ yarn dev
 Build
 
 ```bash
-yarn dev
+yarn build
 ```
