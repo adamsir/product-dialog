@@ -8,6 +8,7 @@
 }
 
 .modal__content {
+  container: modal/inline-size;
   position: relative;
   z-index: 1002;
   background: #ffffff;
@@ -60,8 +61,28 @@
 
 .product-detail {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+
+@container modal (min-width: 600px) {
+  .product-detail {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+  }
+}
+
+@container modal (min-width: 900px) {
+  .product-detail {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+}
+
+.product-detail__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
